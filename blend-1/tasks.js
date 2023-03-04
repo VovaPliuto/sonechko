@@ -45,6 +45,15 @@ const a = 10;
 // показати через alert: "Вірно!"
 //інакше відобразити: "Не знаєте? ECMAScript!"
 
+// const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase().trim();
+
+// if(question === "ecmascript") {
+//     alert ("Вірно!");  
+// } else {
+//    alert("Не знаєте? ECMAScript!") ;  
+// }
+
+
 // const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase();
 
 //TODO: 6 ===================================
@@ -53,6 +62,16 @@ const a = 10;
 //рядок у форматі годин і хвилин
 //70 === 01:10
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+
+
+// const globalMinutes = 70;
+// const hours = Math.floor(globalMinutes / 60); 
+// const modificatedHours = String(hours).padStart(2,0);
+// const minutes = globalMinutes % 60;
+// const modificatedMinutes = String(minutes).padStart(2,0);
+
+// console.log(`${modificatedHours}:${modificatedMinutes}`);
+
 
 //TODO: 7 ===================================
 //Напишіть цикл, який виводить у консоль
