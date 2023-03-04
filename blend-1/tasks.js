@@ -70,8 +70,6 @@
 //   counter += 1;
 // }
 
-
-
 //TODO: 5 ===================================
 //Використовуючи конструкцію if...else,
 //напишіть код, який запитуватиме:
@@ -83,11 +81,10 @@
 // const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase().trim();
 
 // if(question === "ecmascript") {
-//     alert ("Вірно!");  
+//     alert ("Вірно!");
 // } else {
-//    alert("Не знаєте? ECMAScript!") ;  
+//    alert("Не знаєте? ECMAScript!") ;
 // }
-
 
 // const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase();
 
@@ -98,20 +95,31 @@
 //70 === 01:10
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 
-
 // const globalMinutes = 70;
-// const hours = Math.floor(globalMinutes / 60); 
+// const hours = Math.floor(globalMinutes / 60);
 // const modificatedHours = String(hours).padStart(2,0);
 // const minutes = globalMinutes % 60;
 // const modificatedMinutes = String(minutes).padStart(2,0);
 
 // console.log(`${modificatedHours}:${modificatedMinutes}`);
 
-
 //TODO: 7 ===================================
 //Напишіть цикл, який виводить у консоль
 // числа від max до min за спаданням
 // Додайте усі парні числа від min до max
+
+// const min = 10;
+// const max = 60;
+// let result = 0;
+
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 2 === 0) {
+//     result += i;
+//     console.log(i);
+//   }
+// }
+
+// console.log(result);
 
 //TODO: 8 ===================================
 //Напишіть код, який запитуватиме
@@ -129,7 +137,24 @@
 // Якщо відвідувач натиснув відміна виводити рядок 'скасовано'
 //інакше виводити рядок "Невірний пароль!"
 
-// const loginInput = prompt('Введіть свій логін');
+// const loginInput = prompt("Введіть свій логін");
+// const login = "Адмін";
+// const password = "Я головний";
+
+// if (loginInput === login) {
+//   const passwordInput = prompt("Введіть свій пароль");
+//   if (passwordInput) {
+//     if (passwordInput === password) {
+//       alert("Добрий день!");
+//     } else {
+//       alert("Невірний пароль!");
+//     }
+//   } else {
+//     alert("скасовано");
+//   }
+// } else {
+//   alert("Я вас не знаю");
+// }
 
 //TODO: 9 ===================================
 // При завантаженні сторінки користувачеві пропонується
