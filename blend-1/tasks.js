@@ -70,8 +70,6 @@
 //   counter += 1;
 // }
 
-
-
 //TODO: 5 ===================================
 //Використовуючи конструкцію if...else,
 //напишіть код, який запитуватиме:
@@ -83,11 +81,10 @@
 // const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase().trim();
 
 // if(question === "ecmascript") {
-//     alert ("Вірно!");  
+//     alert ("Вірно!");
 // } else {
-//    alert("Не знаєте? ECMAScript!") ;  
+//    alert("Не знаєте? ECMAScript!") ;
 // }
-
 
 // const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase();
 
@@ -98,15 +95,13 @@
 //70 === 01:10
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 
-
 // const globalMinutes = 70;
-// const hours = Math.floor(globalMinutes / 60); 
+// const hours = Math.floor(globalMinutes / 60);
 // const modificatedHours = String(hours).padStart(2,0);
 // const minutes = globalMinutes % 60;
 // const modificatedMinutes = String(minutes).padStart(2,0);
 
 // console.log(`${modificatedHours}:${modificatedMinutes}`);
-
 
 //TODO: 7 ===================================
 //Напишіть цикл, який виводить у консоль
@@ -141,6 +136,24 @@
 // кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
 // Робити перевірку,що користувач ввів саме число,
 // а не довільний набір символів, не потрібно.
+
+
+// let input;
+// let total = 0;
+
+// do {
+//   input = prompt("Введіть число");
+
+//   if (input === null) {
+//     break;
+//   }
+//     input = Number(input);
+//   total += input;
+// } while (true);
+
+// alert(`Загальна введена сума чисел дорінює ${total}`);
+
+
 
 //TODO: 10 ===================================
 // Напишіть цикл, який пропонує ввести
