@@ -15,7 +15,16 @@
 //   premium: true,
 // };
 
-//? Answer
+// //? Answer
+// user.mood = "happy";
+
+// user.hobby = "skydiving";
+
+// user.premium = false;
+
+// for (const key of Object.keys(user)) {
+//   console.log(`${key}: ${ user[key]}`);
+// }
 
 //?
 
@@ -32,7 +41,16 @@
 
 //? Answer
 
-//?
+// function getBool(obj, key) {
+//   const keys = Object.keys(obj);
+
+//   return keys.includes(key);
+// }
+
+// function getBool(obj, key) {
+//   return key in obj;
+// }
+// //?
 
 // console.log(getBool(obj, 'car')); // true
 
@@ -51,11 +69,17 @@
 
 // let sum = 0;
 
-//? Answer
+// //? Answer
 
-//?
+// if (Object.keys(salaries) !== 0) {
+//   for (const salary of Object.values(salaries)) {
+//     sum += salary;
+//    }
+// }
 
 // console.log(sum);
+
+//?
 
 //TODO:==========task-4=============
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
@@ -63,7 +87,19 @@
 // Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
 
 //? Answer
+// function updateObject(obj, ...removedKeys) {
+//   let newObject = {
+//     ...obj
+//   }
 
+//   console.log(removedKeys);
+
+//   for (const key of removedKeys) {
+//     delete newObject[key];
+//   }
+
+//   return newObject;
+// };
 //?
 
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a')); // {c: 3}
@@ -81,9 +117,9 @@
 //   merried: false,
 // };
 
-// ?Answer
+// // ?Answer
 
-//?
+// //?
 
 // changeObject(user);
 
@@ -98,11 +134,21 @@
 //   title: 'My menu',
 // };
 
-//? Answer
+// //? Answer
+// function multiplyNumeric(obj) {
+//   for (const key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//       if (typeof obj[key] === "number") {
+//         obj[key] *= 2;
+//       }
+//     }
+//   }
 
-//?
+//   return obj;
+// };
+// //?
 
-// console.log(multiplyNumeric(menu));
+// console.log(menu);
 
 // після виклику функції
 // menu = {
@@ -121,6 +167,21 @@
 //? Answer
 
 // //?
+
+// function findBestEmployee(obj) {
+//   let bestEmployee = "";
+//   let bestEmployeeTasks = 0;
+
+//   console.log(Object.entries(obj));
+//   for (const [employee, tasks] of Object.entries(obj)) {
+//     if (tasks > bestEmployeeTasks) {
+//       bestEmployeeTasks = tasks;
+//       bestEmployee = employee;
+//     }
+//   }
+
+//   return bestEmployee;
+// }
 
 // console.log(
 //   findBestEmployee({
