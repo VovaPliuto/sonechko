@@ -193,6 +193,22 @@ const filmoteka = [
 // Видалить перший елемент масиву і виведіть його в консоль.
 // Вставте «Реп» і «Реггі» на початок масиву.
 
+// const styles = ['Джаз', 'Блюз'];
+
+// styles.push("Рок-н-рол");
+// console.log(styles);
+
+// styles[1] = "Класика";
+// console.log(styles);
+
+// console.log(styles.shift());
+
+// styles.unshift("Реп", "Реггі");
+// console.log(styles);
+
+
+
+
 //TODO:============task-5==============
 // Напишіть функцію min(a, b), яка повертає
 // менше з чисел a, b
@@ -200,10 +216,19 @@ const filmoteka = [
 
 //? Answer
 
-//?
+// function min(a, b) { 
+//   if (typeof a !== "number" || typeof b !== "number") { 
+//     return "Невірні аргументи";
+//   }
+
+//   return a < b ? a : b;
+// }
 
 // const result = min(10, 5);
 // console.log(result); // 5
+
+//?
+
 
 //TODO:=============task-6=================
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
