@@ -124,13 +124,67 @@ const filmoteka = [
   },
 ];
 
+
+
 //? Напишіть функцію getAllTitlesOfFilms(films), яка повертає масив із усіма назвами фільмів.
+
+// function getAllTitlesOfFilms(films) {
+//   const newArray = [];
+
+//   for (const {title} of films) {
+//     newArray.push(title);
+//   }
+//   return newArray;
+// }
+
+// console.log(getAllTitlesOfFilms(filmoteka));
 
 //? Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
 
+// function findFilmByName(films, filmTitle) {
+//   for (const film of films) {
+//     if (film.title === filmTitle) {
+//       return film;
+//     }
+
+//   }
+//   return `${filmTitle} не знайдено`
+// }
+
+// console.log(findFilmByName(filmoteka, "rrr"));
+
 //? Напишіть функцію getAdultFilms(films), яка повертає масив усіх дорослих фільмів.
 
+// function getAdultFilms(films) {
+//   const newArray = [];
+
+//   for (const film of films) {
+//     if (film.adult) {
+//       newArray.push(film.title)
+       
+//     }
+//   }
+// return newArray;
+// }
+
+// console.log(getAdultFilms(filmoteka));
+
 //? Напишіть функцію getNotAdultFilms(films), яка повертає масив усіх фільмів без обмеження.
+
+// function getNotAdultFilms(films) {
+//   const newArray = [];
+
+//   for (const film of films) {
+//         if (!film.adult) {
+//           newArray.push(film.title)
+           
+//         }
+//       }
+//     return newArray;
+//     }
+    
+//     console.log(getNotAdultFilms(filmoteka));
+
 
 //TODO:============task-4===============
 // Створіть масив styles з елементами «Джаз» та «Блюз».
