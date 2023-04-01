@@ -125,11 +125,25 @@
 //Іншу функцію, яка приймає суму покупки
 //і повертає фінальну суму із збереженою знижкою.
 
+// function saveDiscount(discont) {
+//   return function makeDiscont(sum) {
+//     return sum - sum * (discont / 100);
+//   };
+// }
+
+// const discontPrem = saveDiscount(10);
+
+// console.log(discontPrem(5000));
+// console.log(discontPrem(10000));
+
 //! Методи масивів
 //TODO:=========task-8=================
 // ? Знайдіть перше непарне число
 
-// const numbers = [2, 1, 6, 8, 9, 10, 12]
+// const numbers = [2, 2, 6, 3, 9, 10, 12, 1];
+
+// const result = numbers.find((num) => num % 2 !== 0);
+// console.log(result);
 
 //TODO:===========task-9===============
 
@@ -223,16 +237,27 @@ const users = [
 //TODO:==========================
 // Отримати масив імен всіх користувачів (поле name).
 
+// const names = users.map(({ name }) => name);
+// console.log(names);
+
 //TODO:==========================
 // Отримати масив об'єктів користувачів за кольором очей (eyeColor).
 
-// console.log(getUsersByColor(users, 'brown'))
-// console.log(getUsersByColor(users, 'blue')) // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+// function getUsersByColor(arr, color) {
+//   return arr.filter(({ eyeColor }) => eyeColor === color);
+// }
+
+// console.log(getUsersByColor(users, "brown"));
+// console.log(getUsersByColor(users, "blue")); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 //TODO:==========================
 // Отримати масив імен користувачів за статтю (поле gender)
 
-// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// function getUsersWithGender(arr, gend) {
+//   return arr.filter(({ gender }) => gender === gend).map(({ name }) => name);
+// }
+
+// console.log(getUsersWithGender(users, "female")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 //TODO:==========================
 // Отримати масив тільки неактивних користувачів (поле isActive).
@@ -241,6 +266,8 @@ const users = [
 
 //TODO:==========================
 // Отримати масив користувачів віком від min до max
+// const getUsersWithAge = (arr, min, max) =>
+//   arr.filter(({ age }) => age >= min && age <= max);
 
 // console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
@@ -278,15 +305,21 @@ const users = [
 /// Результат ["Умань", "Харків", "Одеса"]
 
 // const concerts = {
-//     Київ: new Date('2020-04-01'),
-//     Умань: new Date('2023-07-02'),
-//     Вінниця: new Date('2020-04-21'),
-//     Одеса: new Date('2023-07-15'),
-//     Хмельницький: new Date('2020-04-18'),
-//     Харків: new Date('2023-07-10'),
-// }
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2023-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2023-07-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2023-07-10"),
+// };
 
-// console.log(concertsToArray(concerts))
+// const concertsToArray = (obj) => {
+//   return Object.keys(obj)
+//     .filter((city) => obj[city] > new Date())
+//     .sort((a, b) => obj[a] - obj[b]);
+// };
+
+// console.log(concertsToArray(concerts));
 
 //TODO:=========task-11=================
 // У кожному масиві якщо унікальний рядок, у якому не повторюються літери. Знайдіть і виведіть цей рядок.
