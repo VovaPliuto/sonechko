@@ -7,6 +7,22 @@
 //Рядок "Привіт <name>"
 //Реалізуй перевірку, що prompt не порожній
 
+// function letMeSeeYourName(callback) {
+//     const name = prompt("Ввeдіть вашу ім'я");
+//     if (name) {
+//         callback(name);
+//     return
+//     }
+//     alert("ім'я не може бути порожнє");
+// }
+
+// function greet(name) {
+//     alert(`Привіт ${name}`);
+// }
+
+// letMeSeeYourName(greet);
+
+
 //TODO:=================02=============================
 //Напишіть дві функції
 //makeProduct(name, price, callback) - приймає
@@ -16,11 +32,47 @@
 //Передаючи йому створений об'єкт.
 //showProduct(product) - коллбек приймаючий об'єкт
 //продукту і логірующий їх у консоль
+// const random = (min, max) => {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+//   }
+
+  
+// function makeProduct(name, price, callback) {
+    
+// const id = Date.now();
+// const product = {
+//     id,
+//     name,
+//     price
+// }
+
+// callback(product);
+// }
+
+// function showProduct(product) {
+// console.table(`Товар ${product.id}: ${product.name}, Ціна ${product.price}грн.`)
+// }
+
+// makeProduct("Молоко", 45, showProduct);
 
 //TODO:=================03=============================
 // Напишіть функцію makeShef(shefName), яка повертає функцію
 // makeDish(dish), що пам'ятає ім'я шефа при її виклику
 // Функція makeDish має логірувати "<shef> is cooking <dish>"
+
+// function makeShef(shefName) {
+//    return function makeDish(dish) {
+//     console.log(`${shefName} is coocing ${dish}`);
+//    }
+// }
+
+// const shef1 = makeShef("Oleksandr");
+
+// const shef2 = makeShef("Oleg");
+
+// shef1("bekon");
+
+// shef2("Sushe")
 
 //TODO:=================04=============================
 //Напишіть функцію each(array, callback), яка
