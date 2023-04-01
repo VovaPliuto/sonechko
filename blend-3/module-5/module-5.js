@@ -6,7 +6,7 @@
 // const product = {
 //     price: 5000,
 //     showPrice() {
-//         console.log(price)
+//         console.log(this.price)
 //     },
 // }
 // product.showPrice()
@@ -25,7 +25,7 @@
 //     action()
 // }
 
-// callAction(product.showPrice)
+// callAction(product.showPrice.bind(product));
 
 //? answer
 
@@ -40,9 +40,21 @@
 //Додай метод getInfo(), який повертає рядок:
 //`Користувачеві ${} ${} років і в нього ${} публікацій.`
 
+// class User { 
+//   constructor({ userName, age, numbersOfPost }) { 
+//     this.userName = userName
+//     this.age = age
+//     this.numbersOfPost = numbersOfPost
+//   }
+
+//   getInfo() { 
+//     return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
+//   }
+// }
+
 // const polly = new User({ userName: 'Polly', age: 30, numbersOfPost: 15 })
 // console.log(polly)
-// polly.getInfo()
+// console.log(polly.getInfo())
 
 //TODO:=========task-4=================
 
