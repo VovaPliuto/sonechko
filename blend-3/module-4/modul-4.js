@@ -323,8 +323,40 @@ const users = [
 
 //TODO:=========task-11=================
 // У кожному масиві якщо унікальний рядок, у якому не повторюються літери. Знайдіть і виведіть цей рядок.
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+// /https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
-// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); // === 'foo'
-// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); // === 'abcd'
-// console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // === 'qwe'
+// const findUniq = (arr) => arr.find((el, index, arr) => {
+//   const sortedString = el.split("").sort().join("");
+//   return arr.every(
+//     (s, i) => i === index || sortedString !== s.split("").sort().join(""));
+// });
+
+// const findUniq = (arr) => {
+//   const newArr = arr.map((el) => el.split("").sort().join(""));
+//   console.log(newArr);
+//   let item = newArr[0];
+//   for (let element of newArr) { 
+//     if (item === element) {
+//       continue
+//     } else { 
+//       item = element;
+//     }
+//   }
+
+//   return item;
+// };
+ 
+
+// console.log(
+//   findUniq(["abc", "acb", "bac", "foo", "bca", "cab", "cba"])
+// );
+  
+  // const findUniq = allCourses.filter(
+  //   (course, index, array) => array.indexOf(course) === index
+  // );
+
+  console.log(
+    findUniq(["abc", "acb", "bac", "foo", "bca", "cab", "cba"])
+  ); // === 'foo'
+console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); // === 'abcd'
+console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // === 'qwe'
