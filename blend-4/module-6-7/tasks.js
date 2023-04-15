@@ -1,11 +1,51 @@
 //TODO:====================01==========================
 // Натискання на кновку "SHOW ME" має виводити значення з поля введення в alert
 
+/* const btnEl = document.querySelector(".js-alert-button");
+const inputEl = document.querySelector(".js-alert-input");
+
+btnEl.addEventListener("click", onClick);
+
+function onClick() {
+  if (inputEl.value === "") {
+    return alert("Поле не можу бути порожнім");
+  }
+  alert(inputEl.value);
+  inputEl.value = "";
+}
+ */
+
 //TODO:====================02==========================
 // Після натискання на кнопку "SWAP ME" здійснюється обмін вмістом між двома інпутами. Можете натискати на неї кілька разів або вручну змінити вміст інпутів.
 
+/* const refs = {
+  btnEl: document.querySelector(".js-swap-button"),
+  inputLeftEl: document.querySelector(".js-left-swap-input"),
+  inputRightEl: document.querySelector(".js-right-swap-input"),
+};
+
+refs.btnEl.addEventListener("click", () => {
+  const firstValue = refs.inputLeftEl.value;
+  refs.inputLeftEl.value = refs.inputRightEl.value;
+  refs.inputRightEl.value = firstValue;
+}); */
+
 //TODO:====================03==========================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.
+
+/* const btnEl = document.querySelector(".js-password-button");
+const inputEl = document.querySelector(".js-password-input");
+
+btnEl.addEventListener("click", () => {
+  if (inputEl.type === "text") {
+    inputEl.type = "password";
+    btnEl.textContent = "Розкрити";
+    return;
+  }
+  inputEl.type = "text";
+  btnEl.textContent = "Приховати";
+});
+ */
 
 //TODO:====================04==========================
 //  Створіть HTML сторінку з табличкою,
@@ -13,6 +53,21 @@
 //  табличці повинен містити назву продукту та його ціну.
 //  При натисканні на будь - який рядок у табличці відобразіть
 //  повідомлення з назвою продукту та його ціною.
+
+// const tableProductEl = document.querySelector("#productTable");
+// const productDetailEl = document.querySelector("#productDetails");
+
+// tableProductEl.addEventListener("click", onTableClick);
+
+// function onTableClick(e) {
+//   if (e.target.nodeName !== "TD") {
+//     return;
+//   }
+//   const row = e.target.parentNode;
+//   const productName = row.children[0].textContent;
+//   const productPrice = row.cells[1].textContent;
+//   productDetailEl.textContent = `Ви вибрали ${productName} за ${productPrice}`;
+// }
 
 //TODO:====================05==========================
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
