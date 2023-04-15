@@ -192,6 +192,41 @@ btnEl.addEventListener("click", () => {
 //TODO:====================13==========================
 // Даний список людей. Зроби фільтр за ім'ям/прізвищем.
 
+const refs = {
+  inputEl: document.querySelector(".js-contacts-filter"),
+  listEl: document.querySelector(".js-contacts"),
+};
+
+const items = [...refs.listEl.children]; 
+
+refs.inputEl.addEventListener("input", onInputChange);
+
+console.log(items[0].textContent);
+
+function onInputChange(e) { 
+  const { value } = e.target;
+  console.log(value);
+  const filtredItems = [...items].filter((el) => el.textContent === value);
+  console.log(filtredItems);
+
+  const markup = filtredItems.map((el) => {
+    return `<ul class="js-contacts">
+      <li class="contact">${el.textContent}</li>
+    </ul>`;
+  }).join(""); 
+
+  refs.listEl.innerHTML = "";
+  refs.inputEl.insertAdjacentHTML("afterend", markup);
+
+  // console.log(refs.listEl);
+  // refs.listEl.append(...filtredItems);
+}
+
+
+console.log(items);
+
+
+
 //TODO:====================14==========================
 // Клік по кнопці замінює символ з першого поля введення на символ із другого поля введення в усьому тексті. Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
 
