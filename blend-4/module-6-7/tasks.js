@@ -73,15 +73,82 @@ btnEl.addEventListener("click", () => {
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
 
+// const refs = {
+//   eventThumb: document.querySelector(".eventThumb"),
+// };
+
+// window.addEventListener("keydown", onKeyboardPress);
+
+// function onKeyboardPress(e) {
+//   refs.eventThumb.insertAdjacentHTML("beforeend", createElementInEventThumb(e));
+// }
+
+// function createElementInEventThumb(e) {
+//   return `<p>key: ${e.key} - code: ${e.code}</p>`;
+// }
+
 //TODO:====================06==========================
 // Кнопка "Зменшити" робить квадрат меншим на 10 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
 
+// const refs = {
+//   box: document.querySelector(".box"),
+//   decreaseBtn: document.querySelector("#decrease"),
+//   increaseBtn: document.querySelector("#increase"),
+// };
+
+// refs.increaseBtn.addEventListener("click", onBtnClick);
+// refs.decreaseBtn.addEventListener("click", onBtnClick);
+
+// function onBtnClick(e) {
+//   const box = refs.box;
+//   console.log(box.offsetWidth, box.offsetHeight);
+//   if (e.target.id === "increase") {
+//     box.style.width = `${box.offsetWidth + 10}px`;
+//     box.style.height = `${box.offsetHeight + 10}px`;
+//     return;
+//   }
+
+//   box.style.width = `${box.offsetWidth - 10}px`;
+//   box.style.height = `${box.offsetHeight - 10}px`;
+// }
+
 //TODO:====================07==========================
-// Навісьте слухач за кліком на глобальний об'єкт window і визначте, коли клік відбувається всередині елемента з класом "place", виведіть в консоль повідомлення "Ви клікнули в цільовий елемент". Коли клік припадає поза зоною елемента, виведіть повідомлення "Це не цільовий елемент". Використайте метод contains.
+// Навісьте слухач за кліком на глобальний об'єкт window і визначте,
+// коли клік відбувається всередині елемента з класом "place", виведіть в консоль повідомлення
+//"Ви клікнули в цільовий елемент". Коли клік припадає поза зоною елемента, виведіть повідомлення
+//"Це не цільовий елемент". Використайте метод contains.
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
+
+// const refs = {
+//   placeBox: document.querySelector(".place"),
+// };
+
+// window.addEventListener("click", onClick);
+
+// function onClick(e) {
+//   if (refs.placeBox.contains(e.target)) {
+//     console.log("Ви клікнули в цільовий елемент");
+//     return;
+//   }
+//   console.log("Це не цільовий елемент");
+// }
 
 //TODO:====================08==========================
 // По кліку на кнопку "Подвоїти" збільшити значення у кожному елементі списку в 2 рази
+
+// const refs = {
+//   list: document.querySelector(".list"),
+//   multyBtn: document.querySelector(".js-double-btn"),
+// };
+
+// refs.multyBtn.addEventListener("click", onClickMylty);
+
+// function onClickMylty() {
+//   const arr = refs.list.querySelectorAll("li");
+//   arr.forEach((e) => {
+//     e.textContent = Number(e.textContent) * 2;
+//   });
+// }
 
 //TODO:====================09==========================
 // При кліку на коло воно має слідувати за курсором. При повторному кліку воно стає в початкове положення.
@@ -89,6 +156,29 @@ btnEl.addEventListener("click", () => {
 // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
 // https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
+
+// const refs = {
+//   circle: document.querySelector(".outer-circle"),
+// };
+
+// refs.circle.addEventListener("click", onCircleCklick);
+// function onCircleCklick(e) {
+//   const el = e.currentTarget;
+
+//   if (el.style.position === "absolute") {
+//     el.style.position = "static";
+//     window.removeEventListener("mousemove", onMouseMove);
+//     return;
+//   }
+
+//   el.style.position = "absolute";
+//   window.addEventListener("mousemove", onMouseMove);
+// }
+
+// function onMouseMove(e) {
+//   refs.circle.style.top = `${e.pageY - 15}px`;
+//   refs.circle.style.left = `${e.pageX - 15}px`;
+// }
 
 //TODO:====================10==========================
 // При кліці на кожну з кнопок підсумовуються значення з data-атрибутів. Після натискання на кнопку "Вивести результат" виводиться сума значення, а також статистика з інформацією про те, яка кнопка була натиснута скільки разів.
