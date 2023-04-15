@@ -197,35 +197,30 @@ const refs = {
   listEl: document.querySelector(".js-contacts"),
 };
 
-const items = [...refs.listEl.children]; 
+const items = [...refs.listEl.children];
+refs.inputEl.addEventListener("input", _.debounce(onInputChange, 500));
 
-refs.inputEl.addEventListener("input", onInputChange);
-
-console.log(items[0].textContent);
-
-function onInputChange(e) { 
+function onInputChange(e) {
   const { value } = e.target;
-  console.log(value);
-  const filtredItems = [...items].filter((el) => el.textContent === value);
-  console.log(filtredItems);
+  const filtredItems = items.filter((el) =>
+    el.textContent.toLowerCase().includes(value.toLowerCase())
+  );
 
-  const markup = filtredItems.map((el) => {
-    return `<ul class="js-contacts">
-      <li class="contact">${el.textContent}</li>
-    </ul>`;
-  }).join(""); 
-
-  refs.listEl.innerHTML = "";
-  refs.inputEl.insertAdjacentHTML("afterend", markup);
-
-  // console.log(refs.listEl);
-  // refs.listEl.append(...filtredItems);
+  const listItemsMarkup = createListItemsMarkup(filtredItems);
+  populateList(listItemsMarkup);
 }
 
+function createListItemsMarkup(items) {
+  return items
+    .map((el) => {
+      return `<li class="contact">${el.textContent}</li>`;
+    })
+    .join("");
+}
 
-console.log(items);
-
-
+function populateList(markup) {
+  refs.listEl.innerHTML = markup;
+}
 
 //TODO:====================14==========================
 // Клік по кнопці замінює символ з першого поля введення на символ із другого поля введення в усьому тексті. Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
